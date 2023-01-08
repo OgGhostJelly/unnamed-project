@@ -1,25 +1,23 @@
 extends Node
 
-signal storage_maxed
-signal storage_nmaxed
+signal items_changed
 
 
-var items: Array = []
+var items: Array[Pickup] = []#: set = _items_changed
 var max_storage: int = 3
 var is_storage_maxed: bool = false
 
 
+func _items_changed() -> void:#value: Array[Pickup]) -> void:
+	#items = value
+	is_storage_maxed = true if items.size() >= max_storage else false
+	items_changed.emit()
+
+
 func add_item(item: Node) -> void:
 	items.append(item)
-	
-	if items.size() >= max_storage:
-		storage_maxed.emit()
-		is_storage_maxed = true
-
+	_items_changed()
 
 func remove_item(item: Node) -> void:
 	items.erase(item)
-	
-	if items.size() < max_storage:
-		storage_nmaxed.emit()
-		is_storage_maxed = false
+	_items_changed()

@@ -1,17 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvlitrdbgthh8"]
+[gd_scene load_steps=6 format=3 uid="uid://bvlitrdbgthh8"]
 
+[ext_resource type="Texture2D" uid="uid://lk3kkwemhfud" path="res://assets/crosshair.png" id="1_lggf0"]
 [ext_resource type="Script" path="res://atld/ipm/ipm.gd" id="1_vbh1b"]
-[ext_resource type="Texture2D" uid="uid://cuwelusqxieqf" path="res://icon.svg" id="2_qaeba"]
 
-[node name="IPM" type="Sprite2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ambn"]
+bg_color = Color(0, 0, 0, 0.607843)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2keoa"]
+bg_color = Color(0.258824, 0.384314, 0.286275, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_f21f2"]
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/styles/background = SubResource("StyleBoxFlat_1ambn")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_2keoa")
+
+[node name="IPM" type="Node2D"]
 visible = false
-z_index = 4096
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_qaeba")
+z_index = 1
 script = ExtResource("1_vbh1b")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4096
+texture = ExtResource("1_lggf0")
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -115.0
-offset_top = -125.0
-offset_right = 115.0
-offset_bottom = -85.0
+offset_left = -56.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = -37.0
+theme = SubResource("Theme_f21f2")
+value = 50.0

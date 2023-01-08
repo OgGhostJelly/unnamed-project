@@ -1,4 +1,6 @@
-* Update interactor to use higher performance version
-* Add Inventory Placeholder Display
+* Update Interactor to Use Higher Performance Version
+* Add Inventory Display (might be hard)
+* Make Tree Look Better
+* Indicator for Full Inventory
 * Refactor IPM
  - make it not require Interactables to hold display value

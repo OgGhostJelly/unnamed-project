@@ -5,10 +5,14 @@ signal interactable_changed
 
 
 @onready var progress_bar: ProgressBar = $ProgressBar
+@onready var sprite: Sprite2D = $Sprite2D
 var interactable: Interactable: set = _interactable_changed
 
 
 func _process(_delta: float) -> void:
+	sprite.scale.x = sin(Time.get_ticks_msec() * 0.005)
+	sprite.scale.y = sin(Time.get_ticks_msec() * 0.005)
+	
 	update_display_value()
 
 
