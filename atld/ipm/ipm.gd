@@ -5,14 +5,14 @@ signal interactable_changed
 
 
 @onready var progress_bar: ProgressBar = $ProgressBar
-var interactable: Interactable2D: set = _interactable_changed
+var interactable: Interactable: set = _interactable_changed
 
 
 func _process(_delta: float) -> void:
 	update_display_value()
 
 
-func _interactable_changed(value: Interactable2D) -> void:
+func _interactable_changed(value: Interactable) -> void:
 	interactable = value
 	interactable_changed.emit()
 	

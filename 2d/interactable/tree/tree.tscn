@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dkv15avfpkrho"]
 
 [ext_resource type="Script" path="res://2d/interactable/tree/tree.gd" id="1_dcxp3"]
-[ext_resource type="PackedScene" uid="uid://buo615bch7c7a" path="res://2d/wood/wood.tscn" id="2_e26ta"]
+[ext_resource type="PackedScene" uid="uid://ta50vi4yl8gk" path="res://2d/interactable/wood/wood.tscn" id="2_e26ta"]
 [ext_resource type="Texture2D" uid="uid://b10bhe32kpute" path="res://assets/tree.png" id="3_d5r6s"]
 [ext_resource type="Script" path="res://2d/interactable/tree/tree_interactable.gd" id="4_kw1p5"]
 
@@ -21,10 +21,10 @@ drop_spread = 30.0
 position = Vector2(93.7, -83.9)
 texture = ExtResource("3_d5r6s")
 
-[node name="InteractableArea" type="Area2D" parent="."]
+[node name="Interactor" type="Area2D" parent="."]
 script = ExtResource("4_kw1p5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactor"]
 position = Vector2(-9.29999, -48.9)
 shape = SubResource("CapsuleShape2D_ei60b")
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://bvlitrdbgthh8"]
 
 [ext_resource type="Script" path="res://atld/ipm/ipm.gd" id="1_vbh1b"]
 [ext_resource type="Texture2D" uid="uid://cuwelusqxieqf" path="res://icon.svg" id="2_qaeba"]
 
 [node name="IPM" type="Sprite2D"]
+visible = false
 z_index = 4096
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_qaeba")

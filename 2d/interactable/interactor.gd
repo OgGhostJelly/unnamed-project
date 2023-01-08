@@ -1,7 +1,7 @@
 extends Area2D
-class_name InteractableArea2D
+class_name Interactor
 
-var interactable: Interactable2D = null
+var interactable: Interactable = null
 
 
 func _input(event: InputEvent) -> void:
@@ -11,7 +11,7 @@ func _input(event: InputEvent) -> void:
 
 
 func update_interactable() -> void:
-	var _interactable: Interactable2D = get_nearest_interactable()
+	var _interactable: Interactable = get_nearest_interactable()
 	
 	if not hash(interactable) == hash(_interactable):
 		if is_instance_valid(interactable): interactable._deselected()
@@ -21,13 +21,14 @@ func update_interactable() -> void:
 		IPM.interactable = _interactable
 
 
-func get_nearest_interactable() -> Interactable2D:
+func get_nearest_interactable() -> Interactable:
 	var closest_area: Area2D = null
 	var closest_area_length: float = INF
 	
 	for area in get_overlapping_areas() as Array[Area2D]:
 		# if area is not a interactable then continue
-		if not area is Interactable2D: continue
+		if not area.is_in_group("interactables"): continue
+		if area.disabled: continue
 		
 		var area_length: float = area.global_position.distance_to(global_position)
 		

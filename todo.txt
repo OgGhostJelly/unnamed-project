@@ -1,0 +1,4 @@
+* Update interactor to use higher performance version
+* Add Inventory Placeholder Display
+* Refactor IPM
+ - make it not require Interactables to hold display value

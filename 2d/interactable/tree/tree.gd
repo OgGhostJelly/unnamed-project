@@ -30,5 +30,5 @@ func _interacted() -> void:
 
 func _on_health_changed(value: float) -> void:
 	health = value
-	$InteractableArea.display_value = health
-	$InteractableArea.max_display_value = max_health
+	$Interactor.display_value = health
+	$Interactor.max_display_value = max_health

@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed: float = 400.0
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var interactable_area: InteractableArea2D = $InteractorArea
+@onready var interactable_area: Interactor = $InteractorArea
 
 
 func _physics_process(_delta: float) -> void:
