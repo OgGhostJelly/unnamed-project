@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bm8bd1s5wj7t"]
+[gd_scene load_steps=11 format=3 uid="uid://bm8bd1s5wj7t"]
 
 [ext_resource type="Script" path="res://2d/player/player.gd" id="1_6bl6p"]
 [ext_resource type="Texture2D" uid="uid://cuwelusqxieqf" path="res://icon.svg" id="2_j1oli"]
 [ext_resource type="Script" path="res://2d/interactable/interactor.gd" id="3_ryfcr"]
+[ext_resource type="PackedScene" uid="uid://u0moxwgkfjhh" path="res://2d/player/inventory_display/inventory_display.tscn" id="4_l5s4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6r7eb"]
 size = Vector2(128, 128)
@@ -125,3 +126,6 @@ shape = SubResource("CircleShape2D_6e7kx")
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 position_smoothing_enabled = true
+
+[node name="InventoryDisplay" parent="." instance=ExtResource("4_l5s4y")]
+position = Vector2(0, -142)
