@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var overencumbered: float = 0.5
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite: Sprite2D = $Sprite2D
 @onready var interactable_area: Interactor = $InteractorArea
 
 
@@ -37,5 +38,4 @@ func movement() -> void:
 	else:
 		animation_player.play("idle")
 	
-	# flip character based on direction it is moving in
-	transform.x.x = 1.0 if input_vector.x > 0 else -1.0 if input_vector.x < 0.0 else transform.x.x
+	sprite.flip_h = true if input_vector.x > 0 else false if input_vector.x < 0.0 else sprite.flip_h

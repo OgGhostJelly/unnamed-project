@@ -105,16 +105,23 @@ radius = 150.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_6bl6p")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+position_smoothing_enabled = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6r7eb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j1oli")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_4pbgp")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_j1oli")
+[node name="InventoryDisplay" parent="." instance=ExtResource("4_l5s4y")]
+position = Vector2(0, -142)
 
 [node name="InteractorArea" type="Area2D" parent="."]
 monitorable = false
@@ -122,10 +129,3 @@ script = ExtResource("3_ryfcr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractorArea"]
 shape = SubResource("CircleShape2D_6e7kx")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-position_smoothing_enabled = true
-
-[node name="InventoryDisplay" parent="." instance=ExtResource("4_l5s4y")]
-position = Vector2(0, -142)
