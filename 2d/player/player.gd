@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 @export var speed: float = 400.0
+@export var overencumbered: float = 0.5
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var interactable_area: Interactor = $InteractorArea
@@ -22,6 +23,7 @@ func movement() -> void:
 	)
 	
 	velocity = input_vector * speed
+	velocity = velocity * lerp(1.0, overencumbered, float(Inventory.items.size()) / float(Inventory.max_storage))
 	
 	move_and_slide()
 	
