@@ -8,6 +8,10 @@ extends CharacterBody2D
 @onready var interactable_area: Interactor = $InteractorArea
 
 
+func _ready() -> void:
+	Player.node = self
+
+
 func _physics_process(_delta: float) -> void:
 	movement()
 	interactable_area.update_interactable()
@@ -23,7 +27,7 @@ func movement() -> void:
 	)
 	
 	velocity = input_vector * speed
-	velocity = velocity * lerp(1.0, overencumbered, float(Inventory.items.size()) / float(Inventory.max_storage))
+	velocity *= overencumbered if is_instance_valid(Player.item) else 1.0
 	
 	move_and_slide()
 	

@@ -10,7 +10,7 @@ var health: float = max_health: set = _on_health_changed
 
 @onready var vulnerability_timer: Timer = $VulnerabilityTimer
 
-# inventory autoload and pickup stuff
+
 func _process(delta: float) -> void:
 	if vulnerability_timer.is_stopped():
 		health = min(health + (max_health / regeneration) * delta, max_health)

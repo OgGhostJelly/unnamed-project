@@ -2,11 +2,14 @@ extends Interactable
 class_name Pickup
 
 
-func _ready() -> void:
-	disabled = Inventory.is_storage_maxed
-	Inventory.items_changed.connect(func(): disabled = Inventory.is_storage_maxed)
-
-
 func _interacted() -> void:
-	Inventory.add_item(self)
-	get_parent().remove_child(self)
+	Player.pickup(self)
+
+func _pickedup(_item: Node) -> void:
+	pass
+
+func _dropped(_item: Node) -> void:
+	if is_instance_valid(_item):
+		global_position = _item.global_position
+	else:
+		global_position = Player.node.global_position

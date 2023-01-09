@@ -24,7 +24,6 @@ func update_interactable() -> void:
 func get_nearest_interactable() -> Interactable:
 	var closest_area: Area2D = null
 	var closest_area_length: float = INF
-	
 	for area in get_overlapping_areas() as Array[Area2D]:
 		# if area is not a interactable then continue
 		if not area.is_in_group("interactables"): continue

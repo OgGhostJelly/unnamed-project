@@ -1,11 +1,6 @@
-* Update Interactor to Use Higher Performance Version (maybe dont cus lose flexibility)
-
-* Hold only one item at a time
 * Make Tree Look Better (currently really sharp and dark)
 * Refactor IPM
  - make it not require Interactables to hold display value
-
-# give the game idea a better thonk
 
 # NO MORE FEATURES
 # new feature ideas go here v
