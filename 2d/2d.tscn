@@ -1,33 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://b43305s1wvxq5"]
+[gd_scene load_steps=4 format=3 uid="uid://ka3ascqxf4ip"]
 
 [ext_resource type="PackedScene" uid="uid://dkv15avfpkrho" path="res://2d/interactable/tree/tree.tscn" id="1_25mko"]
 [ext_resource type="PackedScene" uid="uid://bm8bd1s5wj7t" path="res://2d/player/player.tscn" id="2_jivt0"]
 [ext_resource type="PackedScene" uid="uid://c033u31yfknya" path="res://2d/interactable/testificate/testificate.tscn" id="3_cgb3o"]
-[ext_resource type="Texture2D" uid="uid://bfeylmpqd8r4o" path="res://assets/ground.png" id="4_ifpc5"]
-[ext_resource type="Script" path="res://2d/TileMap.gd" id="5_moi0y"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrla3"]
-resource_name = "Ground"
-texture = ExtResource("4_ifpc5")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-1:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_v8gp2"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_nrla3")
 
 [node name="2D" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Tree" parent="." instance=ExtResource("1_25mko")]
-position = Vector2(322, 312)
+position = Vector2(377, 320)
+drop = null
+drop_spread = 50.0
 
 [node name="Tree2" parent="." instance=ExtResource("1_25mko")]
 position = Vector2(878, 176)
+drop = null
+drop_spread = 50.0
 
 [node name="Tree3" parent="." instance=ExtResource("1_25mko")]
 position = Vector2(630, 426)
+drop = null
+drop_spread = 50.0
 
 [node name="Player" parent="." instance=ExtResource("2_jivt0")]
 position = Vector2(90, 360)
@@ -37,9 +30,3 @@ position = Vector2(62, 141)
 
 [node name="Wood2" parent="." instance=ExtResource("3_cgb3o")]
 position = Vector2(319, 464)
-
-[node name="TileMap" type="TileMap" parent="."]
-z_index = -4096
-tile_set = SubResource("TileSet_v8gp2")
-format = 2
-script = ExtResource("5_moi0y")

@@ -28,7 +28,7 @@ func movement() -> void:
 	)
 	
 	velocity = input_vector * speed
-	velocity *= overencumbered if is_instance_valid(Player.item) else 1.0
+	velocity *= overencumbered if is_instance_valid(Player.held_item) else 1.0
 	
 	move_and_slide()
 	

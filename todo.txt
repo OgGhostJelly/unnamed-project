@@ -1,6 +1,10 @@
 * Make Tree Look Better (currently really sharp and dark)
  - Make Tree Hitboxes not suck
 
+* Seperate Breakables into Seperate Class
+ - Make It so You Cant Break Breakables while Holding Item
+* Make Inventory Display Use Texture Instead of Duplicated Sprite
+
 * Make Island Randomly Generate
 * Make Island Collision Borders
 * Make Island Art
@@ -10,3 +14,4 @@
 
 ## NO MORE FEATURES new feature ideas go here v
 * marriage and sacrifice your children
+* farming (yes epic)

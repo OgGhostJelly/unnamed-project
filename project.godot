@@ -9,6 +9,11 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "Interactable",
+"class": &"Breakable",
+"language": &"GDScript",
+"path": "res://2d/interactable/breakable.gd"
+}, {
 "base": "Area2D",
 "class": &"Interactable",
 "language": &"GDScript",
@@ -19,15 +24,28 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://2d/interactable/interactor.gd"
 }, {
+"base": "TileMap",
+"class": &"LFFTileMap",
+"language": &"GDScript",
+"path": "res://temp/lazy_flood_fill.gd"
+}, {
 "base": "Interactable",
 "class": &"Pickup",
 "language": &"GDScript",
 "path": "res://2d/interactable/pickup.gd"
+}, {
+"base": "TileMap",
+"class": &"ROFTileMap",
+"language": &"GDScript",
+"path": "res://temp/ropenf.gd"
 }]
 _global_script_class_icons={
+"Breakable": "",
 "Interactable": "",
 "Interactor": "",
-"Pickup": ""
+"LFFTileMap": "",
+"Pickup": "",
+"ROFTileMap": ""
 }
 
 [application]
@@ -88,3 +106,4 @@ cancel={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0

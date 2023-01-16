@@ -4,12 +4,6 @@ class_name Interactor
 var interactable: Interactable = null
 
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact"):
-		if is_instance_valid(interactable):
-			interactable._interacted()
-
-
 func update_interactable() -> void:
 	var _interactable: Interactable = get_nearest_interactable()
 	
@@ -18,7 +12,7 @@ func update_interactable() -> void:
 		if is_instance_valid(_interactable): _interactable._selected()
 		
 		interactable = _interactable
-		IPM.interactable = _interactable
+		Player.selected_item = _interactable
 
 
 func get_nearest_interactable() -> Interactable:

@@ -1,12 +1,8 @@
 extends Node2D
 
 
-signal interactable_changed
-
-
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var sprite: Sprite2D = $Sprite2D
-var interactable: Interactable: set = _interactable_changed
 
 
 func _process(_delta: float) -> void:
@@ -14,27 +10,25 @@ func _process(_delta: float) -> void:
 	sprite.scale.y = sin(Time.get_ticks_msec() * 0.005)
 	
 	update_display_value()
+	update_position()
 
 
-func _interactable_changed(value: Interactable) -> void:
-	interactable = value
-	interactable_changed.emit()
-	
-	if is_instance_valid(interactable):
+func update_position() -> void:
+	if is_instance_valid(Player.selected_item):
 		visible = true
-		global_position = interactable.global_position
+		global_position = Player.selected_item.global_position
 	else:
 		visible = false
 
 
 func update_display_value() -> void:
-	if not is_instance_valid(interactable): return
+	if not is_instance_valid(Player.selected_item): return
 	
-	if interactable.display_value:
+	if Player.selected_item.display_value:
 		progress_bar.visible = true
-		progress_bar.value = interactable.display_value
+		progress_bar.value = Player.selected_item.display_value
 	else:
 		progress_bar.visible = false
 	
-	if interactable.max_display_value:
-		progress_bar.max_value = interactable.max_display_value
+	if Player.selected_item.max_display_value:
+		progress_bar.max_value = Player.selected_item.max_display_value
