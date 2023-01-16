@@ -3,8 +3,6 @@ class_name Interactable
 
 
 var disabled: bool = false
-var display_value: float
-var max_display_value: float
 
 
 func _init() -> void:
@@ -12,10 +10,12 @@ func _init() -> void:
 
 
 func _selected() -> void:
+	IPM.update_display(global_position)
 	pass
 
 
 func _deselected() -> void:
+	IPM.update_display()
 	pass
 
 

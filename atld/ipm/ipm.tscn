@@ -23,7 +23,6 @@ ProgressBar/styles/background = SubResource("StyleBoxFlat_1ambn")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_2keoa")
 
 [node name="IPM" type="Node2D"]
-visible = false
 z_index = 1
 script = ExtResource("1_vbh1b")
 

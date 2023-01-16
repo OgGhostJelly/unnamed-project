@@ -6,6 +6,8 @@ var held_item: Pickup = null: set = _held_item_changed
 var selected_item: Interactable = null
 var node: Node = null
 
+var damage: float = 1.0
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("cancel"):
@@ -20,6 +22,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _held_item_changed(value: Pickup) -> void:
 	held_item = value
 	held_item_changed.emit()
+
 
 func pickup(_item: Node) -> void:
 	if is_instance_valid(held_item): get_tree().current_scene.add_child(held_item); held_item._dropped(_item)

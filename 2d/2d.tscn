@@ -9,18 +9,12 @@ y_sort_enabled = true
 
 [node name="Tree" parent="." instance=ExtResource("1_25mko")]
 position = Vector2(377, 320)
-drop = null
-drop_spread = 50.0
 
 [node name="Tree2" parent="." instance=ExtResource("1_25mko")]
 position = Vector2(878, 176)
-drop = null
-drop_spread = 50.0
 
 [node name="Tree3" parent="." instance=ExtResource("1_25mko")]
 position = Vector2(630, 426)
-drop = null
-drop_spread = 50.0
 
 [node name="Player" parent="." instance=ExtResource("2_jivt0")]
 position = Vector2(90, 360)

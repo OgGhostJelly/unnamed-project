@@ -8,27 +8,12 @@ extends Node2D
 func _process(_delta: float) -> void:
 	sprite.scale.x = sin(Time.get_ticks_msec() * 0.005)
 	sprite.scale.y = sin(Time.get_ticks_msec() * 0.005)
+
+
+func update_display(pos: Variant = null, value: float = 0.0) -> void:
+	sprite.visible = not hash(pos) == hash(null)
+	progress_bar.visible = not is_zero_approx(value)
+	progress_bar.value = value
 	
-	update_display_value()
-	update_position()
-
-
-func update_position() -> void:
-	if is_instance_valid(Player.selected_item):
-		visible = true
-		global_position = Player.selected_item.global_position
-	else:
-		visible = false
-
-
-func update_display_value() -> void:
-	if not is_instance_valid(Player.selected_item): return
-	
-	if Player.selected_item.display_value:
-		progress_bar.visible = true
-		progress_bar.value = Player.selected_item.display_value
-	else:
-		progress_bar.visible = false
-	
-	if Player.selected_item.max_display_value:
-		progress_bar.max_value = Player.selected_item.max_display_value
+	if not hash(pos) == hash(null):
+		global_position = pos
