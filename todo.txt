@@ -5,9 +5,6 @@
 * Make Island Collision Borders
 * Make Island Art
 
-* Refactor IPM
- - make it not require Interactables to hold display value
-
 ## NO MORE FEATURES new feature ideas go here v
 * marriage and sacrifice your children
 * farming (yes epic)
