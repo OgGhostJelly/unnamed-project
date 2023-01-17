@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://2d/player/inventory_display/inventory_display.gd" id="1_o0amr"]
 
-[node name="InventoryDisplay" type="Node2D"]
+[node name="InventoryDisplay" type="Sprite2D"]
 script = ExtResource("1_o0amr")

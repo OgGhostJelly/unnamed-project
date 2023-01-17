@@ -2,7 +2,8 @@ extends Area2D
 class_name Interactable
 
 
-var disabled: bool = false
+@export var display: Texture
+@export var disabled: bool = false
 
 
 func _init() -> void:
@@ -10,12 +11,10 @@ func _init() -> void:
 
 
 func _selected() -> void:
-	IPM.update_display(global_position)
 	pass
 
 
 func _deselected() -> void:
-	IPM.update_display()
 	pass
 
 

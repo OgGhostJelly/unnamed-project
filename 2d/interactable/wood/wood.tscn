@@ -9,6 +9,7 @@ size = Vector2(62, 20)
 [node name="Wood" type="Area2D"]
 z_index = -1
 script = ExtResource("1_16mh6")
+display = ExtResource("2_t20d3")
 metadata/_edit_vertical_guides_ = [31.0, -31.0]
 metadata/_edit_horizontal_guides_ = [-10.0, 10.0]
 
@@ -16,5 +17,4 @@ metadata/_edit_horizontal_guides_ = [-10.0, 10.0]
 shape = SubResource("RectangleShape2D_qx02v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -0.500004)
 texture = ExtResource("2_t20d3")

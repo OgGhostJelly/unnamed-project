@@ -8,12 +8,13 @@ extends Node2D
 func _process(_delta: float) -> void:
 	sprite.scale.x = sin(Time.get_ticks_msec() * 0.005)
 	sprite.scale.y = sin(Time.get_ticks_msec() * 0.005)
-
-
-func update_display(pos: Variant = null, value: float = 0.0) -> void:
-	sprite.visible = not hash(pos) == hash(null)
-	progress_bar.visible = not is_zero_approx(value)
-	progress_bar.value = value
 	
-	if not hash(pos) == hash(null):
-		global_position = pos
+	sprite.visible = is_instance_valid(Player.selected_item) and Player.can_interact()
+	progress_bar.visible = is_instance_valid(Player.selected_item) and Player.selected_item is Breakable and Player.can_interact()
+	
+	if is_instance_valid(Player.selected_item):
+		global_position = Player.selected_item.global_position
+		
+		if Player.selected_item is Breakable:
+			progress_bar.max_value = Player.selected_item.max_health
+			progress_bar.value = Player.selected_item.health
