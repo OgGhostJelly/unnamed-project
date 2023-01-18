@@ -55,6 +55,10 @@ run/main_scene="res://2d/2d.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 IPM="*res://atld/ipm/ipm.tscn"

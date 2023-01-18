@@ -9,7 +9,7 @@ height = 50
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qx02v"]
 size = Vector2(32, 46)
 
-[node name="Testificate" type="Area2D"]
+[node name="Log" type="Area2D"]
 z_index = -1
 script = ExtResource("1_vud12")
 display = SubResource("NoiseTexture2D_7fdqb")

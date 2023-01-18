@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkv15avfpkrho"]
+[gd_scene load_steps=7 format=3 uid="uid://cs4o25td1jgcw"]
 
-[ext_resource type="Texture2D" uid="uid://b10bhe32kpute" path="res://assets/tree.png" id="3_d5r6s"]
-[ext_resource type="PackedScene" uid="uid://ta50vi4yl8gk" path="res://2d/interactable/wood/wood.tscn" id="3_q1hq4"]
-[ext_resource type="Script" path="res://2d/interactable/breakable.gd" id="4_fo35v"]
+[ext_resource type="Texture2D" uid="uid://b10bhe32kpute" path="res://assets/tree.png" id="1_rhi77"]
+[ext_resource type="Script" path="res://2d/interactable/breakable.gd" id="2_vsd65"]
+[ext_resource type="PackedScene" uid="uid://ta50vi4yl8gk" path="res://2d/interactable/wood.tscn" id="3_e4cmj"]
+[ext_resource type="PackedScene" uid="uid://c033u31yfknya" path="res://2d/interactable/log.tscn" id="4_hagsb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei60b"]
 radius = 70.0
@@ -15,13 +16,12 @@ size = Vector2(150, 27)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -114)
-texture = ExtResource("3_d5r6s")
+texture = ExtResource("1_rhi77")
 
 [node name="Breakable" type="Area2D" parent="."]
 position = Vector2(-7, -99)
-script = ExtResource("4_fo35v")
-dropped_item = ExtResource("3_q1hq4")
-drop_rate = Vector2i(3, 3)
+script = ExtResource("2_vsd65")
+drops = [ExtResource("3_e4cmj"), ExtResource("3_e4cmj"), ExtResource("4_hagsb")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Breakable"]
 shape = SubResource("CapsuleShape2D_ei60b")

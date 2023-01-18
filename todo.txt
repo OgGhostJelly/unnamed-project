@@ -1,6 +1,8 @@
 * Make Tree Look Better (currently really sharp and dark)
  - Make Tree Hitboxes not suck
 
+* Make Asset For Log
+
 * Make Island Randomly Generate
 * Make Island Collision Borders
 * Make Island Art
