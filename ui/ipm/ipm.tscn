@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://csk5e446ik2yq"]
 
 [ext_resource type="Texture2D" uid="uid://lk3kkwemhfud" path="res://assets/crosshair.png" id="1_lggf0"]
 [ext_resource type="Script" path="res://ui/ipm/ipm.gd" id="1_vbh1b"]
@@ -36,4 +36,5 @@ offset_top = -64.0
 offset_right = 64.0
 offset_bottom = -37.0
 theme = SubResource("Theme_f21f2")
-value = 50.0
+max_value = 1.0
+value = 1.0

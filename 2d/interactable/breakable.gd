@@ -2,17 +2,18 @@ extends Interactable
 class_name Breakable
 
 
-@export var max_health: float = 3.0
-@export var health: float = 3.0
+@export var defense: float = 3.0
 @export var drops: Array[PackedScene]
 @export var spread: float = 30.0
+
+var health: float = 1.0
 
 
 
 func _interacted() -> void:
-	health -= Player.damage
+	health -= Player.damage / defense
 	
-	if health <= 0.0:
+	if health <= 0.0 or is_zero_approx(health):
 		drop_items()
 		get_parent().queue_free()
 

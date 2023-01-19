@@ -16,5 +16,4 @@ func _process(_delta: float) -> void:
 		global_position = Player.selected_item.global_position
 		
 		if Player.selected_item is Breakable:
-			progress_bar.max_value = Player.selected_item.max_health
 			progress_bar.value = Player.selected_item.health
