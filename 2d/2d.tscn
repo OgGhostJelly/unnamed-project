@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://cu0mw4vsinhbp"]
 
-[ext_resource type="PackedScene" uid="uid://t2r55gk3mui7" path="res://2d/interactable/tree.tscn" id="1_25mko"]
+[ext_resource type="PackedScene" uid="uid://cs4o25td1jgcw" path="res://2d/interactable/tree.tscn" id="1_25mko"]
 [ext_resource type="PackedScene" uid="uid://bm8bd1s5wj7t" path="res://2d/player/player.tscn" id="2_jivt0"]
 [ext_resource type="PackedScene" uid="uid://c033u31yfknya" path="res://2d/interactable/log.tscn" id="3_cgb3o"]
 

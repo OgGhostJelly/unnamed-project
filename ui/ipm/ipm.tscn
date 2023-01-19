@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvlitrdbgthh8"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Texture2D" uid="uid://lk3kkwemhfud" path="res://assets/crosshair.png" id="1_lggf0"]
-[ext_resource type="Script" path="res://atld/ipm/ipm.gd" id="1_vbh1b"]
+[ext_resource type="Script" path="res://ui/ipm/ipm.gd" id="1_vbh1b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ambn"]
 bg_color = Color(0, 0, 0, 0.607843)

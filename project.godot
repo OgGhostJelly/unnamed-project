@@ -27,7 +27,7 @@ _global_script_classes=[{
 "base": "TileMap",
 "class": &"LFFTileMap",
 "language": &"GDScript",
-"path": "res://temp/lazy_flood_fill.gd"
+"path": "res://2d/_temp/lazy_flood_fill.gd"
 }, {
 "base": "Interactable",
 "class": &"Pickup",
@@ -37,7 +37,7 @@ _global_script_classes=[{
 "base": "TileMap",
 "class": &"ROFTileMap",
 "language": &"GDScript",
-"path": "res://temp/ropenf.gd"
+"path": "res://2d/_temp/ropenf.gd"
 }]
 _global_script_class_icons={
 "Breakable": "",
@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="unnamed project"
-run/main_scene="res://2d/2d.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -61,7 +61,6 @@ buses/default_bus_layout=""
 
 [autoload]
 
-IPM="*res://atld/ipm/ipm.tscn"
 Player="*res://atld/player.gd"
 
 [input]
