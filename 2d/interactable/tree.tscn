@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://dp66vndv3lp21"]
 
 [ext_resource type="Texture2D" uid="uid://b10bhe32kpute" path="res://assets/tree.png" id="1_rhi77"]
 [ext_resource type="Script" path="res://2d/interactable/breakable.gd" id="2_vsd65"]
@@ -21,6 +21,7 @@ texture = ExtResource("1_rhi77")
 [node name="Breakable" type="Area2D" parent="."]
 position = Vector2(-7, -99)
 script = ExtResource("2_vsd65")
+defense = 5.0
 drops = [ExtResource("3_e4cmj"), ExtResource("3_e4cmj"), ExtResource("4_hagsb")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Breakable"]

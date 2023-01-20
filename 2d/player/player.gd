@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 
 func _ready() -> void:
-	Player.node = self
+	Inventory.drop_position = func(): return global_position
 
 
 func _physics_process(_delta: float) -> void:
@@ -28,7 +28,7 @@ func movement() -> void:
 	)
 	
 	velocity = input_vector * speed
-	velocity *= overencumbered if is_instance_valid(Player.held_item) else 1.0
+	velocity *= overencumbered if is_instance_valid(Inventory.held_item) else 1.0
 	
 	move_and_slide()
 	

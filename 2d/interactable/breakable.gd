@@ -11,7 +11,7 @@ var health: float = 1.0
 
 
 func _interacted() -> void:
-	health -= Player.damage / defense
+	health -= Stats.damage / defense
 	
 	if health <= 0.0 or is_zero_approx(health):
 		drop_items()

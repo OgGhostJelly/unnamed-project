@@ -12,7 +12,7 @@ func update_interactable() -> void:
 		if is_instance_valid(_interactable): _interactable._selected()
 		
 		interactable = _interactable
-		Player.selected_item = _interactable
+		Inventory.selected_item = _interactable
 
 
 func get_nearest_interactable() -> Interactable:

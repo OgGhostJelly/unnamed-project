@@ -61,7 +61,9 @@ buses/default_bus_layout=""
 
 [autoload]
 
-Player="*res://atld/player.gd"
+Inventory="*res://atld/inventory.gd"
+Stats="*res://atld/stats.gd"
+Game="*res://atld/game.gd"
 
 [input]
 

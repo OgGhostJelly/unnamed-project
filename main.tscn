@@ -8,5 +8,3 @@
 [node name="2D" parent="." instance=ExtResource("1_m032m")]
 
 [node name="UI" parent="." instance=ExtResource("2_faw0i")]
-grow_horizontal = 2
-grow_vertical = 2
