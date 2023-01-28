@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://85h2weiqtuw3"]
+
+[ext_resource type="Script" path="res://ui/stats/stats.gd" id="1_yy4xw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yy4xw")
+
+[node name="LeftPanel" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 27.0
+
+[node name="Text" type="VBoxContainer" parent="LeftPanel"]
+layout_mode = 2
+
+[node name="Hunger" type="Label" parent="LeftPanel/Text"]
+layout_mode = 2
+text = "Hunger: "
+
+[node name="Thirst" type="Label" parent="LeftPanel/Text"]
+layout_mode = 2
+text = "Thirst:"
+
+[node name="Value" type="VBoxContainer" parent="LeftPanel"]
+layout_mode = 2
+
+[node name="Hunger" type="ProgressBar" parent="LeftPanel/Value"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+show_percentage = false
+
+[node name="Thirst" type="ProgressBar" parent="LeftPanel/Value"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+show_percentage = false
+
+[node name="TopPanel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Text" type="Label" parent="TopPanel"]
+layout_mode = 2
+text = "Worship"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Worship" type="ProgressBar" parent="TopPanel"]
+custom_minimum_size = Vector2(300, 25)
+layout_mode = 2
+max_value = 1.0
+show_percentage = false

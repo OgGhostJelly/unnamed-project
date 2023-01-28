@@ -1,10 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfxa3y7qha3w7"]
 
 [ext_resource type="PackedScene" uid="uid://cu0mw4vsinhbp" path="res://2d/2d.tscn" id="1_m032m"]
-[ext_resource type="PackedScene" uid="uid://cmvxsfqtpo4id" path="res://ui/ui.tscn" id="2_faw0i"]
+[ext_resource type="PackedScene" uid="uid://d3wygc7hok5sc" path="res://ui/ui.tscn" id="2_faw0i"]
 
 [node name="Main" type="Node"]
 
 [node name="2D" parent="." instance=ExtResource("1_m032m")]
 
-[node name="UI" parent="." instance=ExtResource("2_faw0i")]
+[node name="ForeLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="UI" parent="ForeLayer" instance=ExtResource("2_faw0i")]

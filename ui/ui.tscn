@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmvxsfqtpo4id"]
+[gd_scene load_steps=2 format=3 uid="uid://d3wygc7hok5sc"]
 
-[ext_resource type="PackedScene" uid="uid://csk5e446ik2yq" path="res://ui/ipm/ipm.tscn" id="1_d35m3"]
+[ext_resource type="PackedScene" uid="uid://85h2weiqtuw3" path="res://ui/stats/stats.tscn" id="1_csypq"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -10,4 +10,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="IPM" parent="." instance=ExtResource("1_d35m3")]
+[node name="Stats" parent="." instance=ExtResource("1_csypq")]

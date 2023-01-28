@@ -14,7 +14,7 @@ var hunger_decrease: float = 0.01
 
 var thirst: float = 1.0:
 	set(v): thirst = v; thirst_changed.emit()
-var thirst_decrease: float = 0.01
+var thirst_decrease: float = 0.02
 
 var worship: float = 0.5:
 	set(v): worship = v; worship_changed.emit()
