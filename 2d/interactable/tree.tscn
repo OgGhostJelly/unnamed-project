@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b10bhe32kpute" path="res://assets/tree.png" id="1_rhi77"]
 [ext_resource type="Script" path="res://2d/interactable/breakable.gd" id="2_vsd65"]
-[ext_resource type="PackedScene" path="res://2d/interactable/wood.tscn" id="3_e4cmj"]
+[ext_resource type="PackedScene" uid="uid://dgqdtkvmfvva3" path="res://2d/interactable/wood.tscn" id="3_e4cmj"]
 [ext_resource type="PackedScene" uid="uid://c033u31yfknya" path="res://2d/interactable/log.tscn" id="4_hagsb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei60b"]

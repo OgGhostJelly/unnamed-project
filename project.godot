@@ -24,6 +24,7 @@ buses/default_bus_layout=""
 Inventory="*res://atld/inventory.gd"
 Stats="*res://atld/stats.gd"
 Game="*res://atld/game.gd"
+Crafting="*res://atld/crafting.gd"
 
 [input]
 
